@@ -29,5 +29,8 @@ int main() {
 
  // Test bool InXish(sting mytext, sting myword);
 
+ if(InXish( "tabracyll", "try"))
+   	std::cout << "Part of xish? " << std::endl;
+
 }
 

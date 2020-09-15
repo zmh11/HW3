@@ -19,6 +19,8 @@ HasBalancedParentheses
 */
 #include <string>
 
+bool dogishHelper( std::string, std::string );
+
 void ReverseArray( int reverse[], int length){
   int back = length -1;
   int temp;
@@ -50,5 +52,31 @@ bool HasBalancedParentheses(std::string balance){
   return false;
 }
 
-bool InDogish(std::string k)
-{return true;}
+bool InDogish(std::string word)
+{
+  return dogishHelper(word, "dog");
+}
+
+bool dogishHelper( std::string my_text, std::string dog ){
+  for( int k = 0; k < my_text.length(); k++ ){
+    if(dog[0] == my_text[k])
+      {
+        if (dog.length() == 1)
+          return true;
+        return dogishHelper( my_text.substr( k ), dog.substr( 1 )  );
+      }
+  }
+  return false;
+}
+
+bool InXish(std::string my_text, std::string my_word){
+  for( int k = 0; k < my_text.length(); k++ ){
+    if(my_word[0] == my_text[k])
+      {
+        if (my_word.length() == 1)
+          return true;
+        return InXish( my_text.substr( k ), my_word.substr( 1 )  );
+      }
+  }
+  return false;
+}
