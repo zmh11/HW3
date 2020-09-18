@@ -1,5 +1,5 @@
 /****
-* PSEUDOCODE:
+ PSEUDOCODE:
 ReverseArray:
   int back = length of reverse
   int temp will hold value to switch
@@ -15,7 +15,24 @@ HasBalancedParentheses
   if open pren == closed pren 
     return true
   return false
-*
+InDogish
+  return doghelper(string)
+
+dogishHelper
+  bool dogishHelper( string my_text, string dog ){
+  for( k < length of my text){
+    if(dog[0] == letter in my text )
+        if (dog length == 1)
+          return true;
+        return dogishHelper( my_text.substr( k ), dog.substr( 1 )  )
+
+InXish
+  bool InXish( string my_text, string word ){
+  for( k < length of my text){
+    if(word[0] == letter in my text )
+        if (word length == 1)
+          return true;
+        return InXish( my_text.substr( k ), word.substr( 1 )  )
 */
 #include <string>
 
